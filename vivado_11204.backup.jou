@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Fri Nov 17 13:08:31 2017
+# Process ID: 11204
+# Current directory: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20400 E:\Workspace\Vivado_16.4\2017_11_17_Pingpang_RAM\Pingpang_RAM.xpr
+# Log file: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/vivado.log
+# Journal file: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.xpr

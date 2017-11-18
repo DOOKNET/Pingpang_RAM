@@ -1,2 +1,11 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+* VHDL linguist-language=Verilog
+=======
+=======
+>>>>>>> 13073cc7fd66c604c27ae7888cc0031862064e27
+=======
+>>>>>>> 13073cc7fd66c604c27ae7888cc0031862064e27
+* VHDL linguist-language=Verilog
