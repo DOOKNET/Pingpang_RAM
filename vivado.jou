@@ -43,3 +43,4 @@ run 100 us
 run 100 us
 relaunch_sim
 run 100 us
+close_sim

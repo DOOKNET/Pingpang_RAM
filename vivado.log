@@ -228,3 +228,5 @@ INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 Vivado Simulator 2016.4
 Time resolution is 1 ps
 run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
