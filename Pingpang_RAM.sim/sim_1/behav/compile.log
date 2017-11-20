@@ -1,7 +1,8 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/sim/FIFO.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/Code/FIFO_Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO_Control
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_fifo
-INFO: [VRFC 10-2458] undeclared symbol dout, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v:70]
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

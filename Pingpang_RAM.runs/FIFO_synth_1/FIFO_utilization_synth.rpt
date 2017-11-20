@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
-| Date         : Mon Nov 20 17:27:09 2017
+| Date         : Tue Nov 21 03:17:47 2017
 | Host         : DESKTOP-JC6NIF0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file FIFO_utilization_synth.rpt -pb FIFO_utilization_synth.pb
 | Design       : FIFO
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  105 |     0 |     20800 |  0.50 |
-|   LUT as Logic          |  105 |     0 |     20800 |  0.50 |
+| Slice LUTs*             |   92 |     0 |     20800 |  0.44 |
+|   LUT as Logic          |   92 |     0 |     20800 |  0.44 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  178 |     0 |     41600 |  0.43 |
-|   Register as Flip Flop |  178 |     0 |     41600 |  0.43 |
+| Slice Registers         |  154 |     0 |     41600 |  0.37 |
+|   Register as Flip Flop |  154 |     0 |     41600 |  0.37 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 178   |          Yes |       Reset |            - |
+| 154   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,12 +150,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  178 |        Flop & Latch |
-| LUT2     |   49 |                 LUT |
-| LUT4     |   40 |                 LUT |
-| CARRY4   |   18 |          CarryLogic |
-| LUT5     |   12 |                 LUT |
+| FDRE     |  154 |        Flop & Latch |
+| LUT2     |   48 |                 LUT |
+| LUT4     |   30 |                 LUT |
+| CARRY4   |   14 |          CarryLogic |
 | LUT6     |   10 |                 LUT |
+| LUT5     |   10 |                 LUT |
 | LUT3     |    8 |                 LUT |
 | LUT1     |    2 |                 LUT |
 | RAMB18E1 |    1 |        Block Memory |

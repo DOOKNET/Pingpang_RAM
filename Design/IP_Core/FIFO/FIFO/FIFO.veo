@@ -62,11 +62,7 @@ FIFO your_instance_name (
   .rd_en(rd_en),                  // input wire rd_en
   .dout(dout),                    // output wire [13 : 0] dout
   .full(full),                    // output wire full
-  .almost_full(almost_full),      // output wire almost_full
-  .wr_ack(wr_ack),                // output wire wr_ack
   .empty(empty),                  // output wire empty
-  .almost_empty(almost_empty),    // output wire almost_empty
-  .valid(valid),                  // output wire valid
   .rd_data_count(rd_data_count),  // output wire [9 : 0] rd_data_count
   .wr_data_count(wr_data_count)  // output wire [9 : 0] wr_data_count
 );

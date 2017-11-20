@@ -61,11 +61,7 @@ module FIFO (
   rd_en,
   dout,
   full,
-  almost_full,
-  wr_ack,
   empty,
-  almost_empty,
-  valid,
   rd_data_count,
   wr_data_count
 );
@@ -84,14 +80,8 @@ input wire rd_en;
 output wire [13 : 0] dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *)
 output wire full;
-(* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE ALMOST_FULL" *)
-output wire almost_full;
-output wire wr_ack;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
-(* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ ALMOST_EMPTY" *)
-output wire almost_empty;
-output wire valid;
 output wire [9 : 0] rd_data_count;
 output wire [9 : 0] wr_data_count;
 
@@ -107,8 +97,8 @@ output wire [9 : 0] wr_data_count;
     .C_ENABLE_RLOCS(0),
     .C_FAMILY("artix7"),
     .C_FULL_FLAGS_RST_VAL(0),
-    .C_HAS_ALMOST_EMPTY(1),
-    .C_HAS_ALMOST_FULL(1),
+    .C_HAS_ALMOST_EMPTY(0),
+    .C_HAS_ALMOST_FULL(0),
     .C_HAS_BACKUP(0),
     .C_HAS_DATA_COUNT(0),
     .C_HAS_INT_CLK(0),
@@ -119,8 +109,8 @@ output wire [9 : 0] wr_data_count;
     .C_HAS_RST(0),
     .C_HAS_SRST(0),
     .C_HAS_UNDERFLOW(0),
-    .C_HAS_VALID(1),
-    .C_HAS_WR_ACK(1),
+    .C_HAS_VALID(0),
+    .C_HAS_WR_ACK(0),
     .C_HAS_WR_DATA_COUNT(1),
     .C_HAS_WR_RST(0),
     .C_IMPLEMENTATION_TYPE(2),
@@ -323,12 +313,12 @@ output wire [9 : 0] wr_data_count;
     .sleep(1'D0),
     .dout(dout),
     .full(full),
-    .almost_full(almost_full),
-    .wr_ack(wr_ack),
+    .almost_full(),
+    .wr_ack(),
     .overflow(),
     .empty(empty),
-    .almost_empty(almost_empty),
-    .valid(valid),
+    .almost_empty(),
+    .valid(),
     .underflow(),
     .data_count(),
     .rd_data_count(rd_data_count),

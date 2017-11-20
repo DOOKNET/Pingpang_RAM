@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
 // Date        : Tue Nov 21 03:17:47 2017
 // Host        : DESKTOP-JC6NIF0 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ FIFO_sim_netlist.v
 // Design      : FIFO
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@
 
 (* CHECK_LICENSE_TYPE = "FIFO,fifo_generator_v13_1_3,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "fifo_generator_v13_1_3,Vivado 2016.4" *) 
 (* NotValidForBitStream *)
-module FIFO
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (wr_clk,
     rd_clk,
     din,
@@ -370,7 +370,7 @@ module FIFO
   (* C_WR_PNTR_WIDTH_WDCH = "10" *) 
   (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
   (* C_WR_RESPONSE_LATENCY = "1" *) 
-  FIFO_fifo_generator_v13_1_3 U0
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3 U0
        (.almost_empty(NLW_U0_almost_empty_UNCONNECTED),
         .almost_full(NLW_U0_almost_full_UNCONNECTED),
         .axi_ar_data_count(NLW_U0_axi_ar_data_count_UNCONNECTED[4:0]),
@@ -604,8 +604,7 @@ module FIFO
         .wr_rst_busy(NLW_U0_wr_rst_busy_UNCONNECTED));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
-module FIFO_blk_mem_gen_generic_cstr
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_generic_cstr
    (dout,
     wr_clk,
     rd_clk,
@@ -632,7 +631,7 @@ module FIFO_blk_mem_gen_generic_cstr
   wire rd_clk;
   wire wr_clk;
 
-  FIFO_blk_mem_gen_prim_width \ramloop[0].ram.r 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_width \ramloop[0].ram.r 
        (.E(E),
         .Q(Q),
         .WEA(WEA),
@@ -643,8 +642,7 @@ module FIFO_blk_mem_gen_generic_cstr
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module FIFO_blk_mem_gen_prim_width
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_width
    (dout,
     wr_clk,
     rd_clk,
@@ -671,7 +669,7 @@ module FIFO_blk_mem_gen_prim_width
   wire rd_clk;
   wire wr_clk;
 
-  FIFO_blk_mem_gen_prim_wrapper \prim_noinit.ram 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_wrapper \prim_noinit.ram 
        (.E(E),
         .Q(Q),
         .WEA(WEA),
@@ -682,8 +680,7 @@ module FIFO_blk_mem_gen_prim_width
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module FIFO_blk_mem_gen_prim_wrapper
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_prim_wrapper
    (dout,
     wr_clk,
     rd_clk,
@@ -843,8 +840,7 @@ module FIFO_blk_mem_gen_prim_wrapper
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
-module FIFO_blk_mem_gen_top
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_top
    (dout,
     wr_clk,
     rd_clk,
@@ -871,7 +867,7 @@ module FIFO_blk_mem_gen_top
   wire rd_clk;
   wire wr_clk;
 
-  FIFO_blk_mem_gen_generic_cstr \valid.cstr 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_generic_cstr \valid.cstr 
        (.E(E),
         .Q(Q),
         .WEA(WEA),
@@ -882,8 +878,7 @@ module FIFO_blk_mem_gen_top
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_5" *) 
-module FIFO_blk_mem_gen_v8_3_5
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_3_5
    (dout,
     wr_clk,
     rd_clk,
@@ -910,7 +905,7 @@ module FIFO_blk_mem_gen_v8_3_5
   wire rd_clk;
   wire wr_clk;
 
-  FIFO_blk_mem_gen_v8_3_5_synth inst_blk_mem_gen
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_3_5_synth inst_blk_mem_gen
        (.E(E),
         .Q(Q),
         .WEA(WEA),
@@ -921,8 +916,7 @@ module FIFO_blk_mem_gen_v8_3_5
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_5_synth" *) 
-module FIFO_blk_mem_gen_v8_3_5_synth
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_3_5_synth
    (dout,
     wr_clk,
     rd_clk,
@@ -949,7 +943,7 @@ module FIFO_blk_mem_gen_v8_3_5_synth
   wire rd_clk;
   wire wr_clk;
 
-  FIFO_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
        (.E(E),
         .Q(Q),
         .WEA(WEA),
@@ -960,8 +954,7 @@ module FIFO_blk_mem_gen_v8_3_5_synth
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "clk_x_pntrs" *) 
-module FIFO_clk_x_pntrs
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs
    (S,
     WR_PNTR_RD,
     \rd_dc_i_reg[7] ,
@@ -1108,20 +1101,20 @@ module FIFO_clk_x_pntrs
         .I2(p_22_out),
         .I3(\gc0.count_reg[9] [9]),
         .O(v1_reg_0[4]));
-  FIFO_synchronizer_ff \gnxpm_cdc.gsync_stage[1].rd_stg_inst 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff \gnxpm_cdc.gsync_stage[1].rd_stg_inst 
        (.in0(wr_pntr_gc),
         .out(p_3_out),
         .rd_clk(rd_clk));
-  FIFO_synchronizer_ff_3 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_3 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
        (.Q(rd_pntr_gc),
         .out(p_4_out),
         .wr_clk(wr_clk));
-  FIFO_synchronizer_ff_4 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_4 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
        (.D({p_0_out,gray2bin}),
         .\gnxpm_cdc.wr_pntr_bin_reg[9] (p_5_out),
         .out(p_3_out),
         .rd_clk(rd_clk));
-  FIFO_synchronizer_ff_5 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_5 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
        (.D({\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_1 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_2 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_3 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_4 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_5 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_6 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_7 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_8 ,\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_9 }),
         .\gnxpm_cdc.rd_pntr_bin_reg[9] (p_6_out),
         .out(p_4_out),
@@ -1632,8 +1625,7 @@ module FIFO_clk_x_pntrs
         .O(S[0]));
 endmodule
 
-(* ORIG_REF_NAME = "compare" *) 
-module FIFO_compare
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_compare
    (ram_full_i_reg,
     v1_reg,
     wr_en,
@@ -1690,7 +1682,7 @@ module FIFO_compare
 endmodule
 
 (* ORIG_REF_NAME = "compare" *) 
-module FIFO_compare_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_compare_0
    (comp2,
     v1_reg_0);
   output comp2;
@@ -1729,7 +1721,7 @@ module FIFO_compare_0
 endmodule
 
 (* ORIG_REF_NAME = "compare" *) 
-module FIFO_compare_1
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_compare_1
    (ram_empty_fb_i_reg,
     v1_reg,
     rd_en,
@@ -1786,7 +1778,7 @@ module FIFO_compare_1
 endmodule
 
 (* ORIG_REF_NAME = "compare" *) 
-module FIFO_compare_2
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_compare_2
    (comp1,
     v1_reg_0);
   output comp1;
@@ -1824,8 +1816,7 @@ module FIFO_compare_2
         .S({\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED [3:1],v1_reg_0[4]}));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
-module FIFO_fifo_generator_ramfifo
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
    (dout,
     empty,
     full,
@@ -1877,7 +1868,7 @@ module FIFO_fifo_generator_ramfifo
   wire [9:0]wr_data_count;
   wire wr_en;
 
-  FIFO_clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx 
        (.Q(p_0_out),
         .RD_PNTR_WR(p_23_out),
         .S({\gntv_or_sync_fifo.gcx.clkx_n_0 ,\gntv_or_sync_fifo.gcx.clkx_n_1 ,\gntv_or_sync_fifo.gcx.clkx_n_2 ,\gntv_or_sync_fifo.gcx.clkx_n_3 }),
@@ -1890,7 +1881,7 @@ module FIFO_fifo_generator_ramfifo
         .v1_reg(\gras.rsts/c0/v1_reg ),
         .v1_reg_0(\gras.rsts/c1/v1_reg ),
         .wr_clk(wr_clk));
-  FIFO_rd_logic \gntv_or_sync_fifo.gl0.rd 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic \gntv_or_sync_fifo.gl0.rd 
        (.\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram (p_0_out),
         .E(\gntv_or_sync_fifo.gl0.rd_n_1 ),
         .Q(rd_pntr_plus1),
@@ -1904,7 +1895,7 @@ module FIFO_fifo_generator_ramfifo
         .rd_en(rd_en),
         .v1_reg(\gras.rsts/c0/v1_reg ),
         .v1_reg_0(\gras.rsts/c1/v1_reg ));
-  FIFO_wr_logic \gntv_or_sync_fifo.gl0.wr 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic \gntv_or_sync_fifo.gl0.wr 
        (.Q(p_12_out),
         .RD_PNTR_WR(p_23_out),
         .WEA(\gntv_or_sync_fifo.gl0.wr_n_1 ),
@@ -1912,7 +1903,7 @@ module FIFO_fifo_generator_ramfifo
         .wr_clk(wr_clk),
         .wr_data_count(wr_data_count),
         .wr_en(wr_en));
-  FIFO_memory \gntv_or_sync_fifo.mem 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory \gntv_or_sync_fifo.mem 
        (.E(\gntv_or_sync_fifo.gl0.rd_n_1 ),
         .Q(p_12_out),
         .WEA(\gntv_or_sync_fifo.gl0.wr_n_1 ),
@@ -1923,8 +1914,7 @@ module FIFO_fifo_generator_ramfifo
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
-module FIFO_fifo_generator_top
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top
    (dout,
     empty,
     full,
@@ -1957,7 +1947,7 @@ module FIFO_fifo_generator_top
   wire [9:0]wr_data_count;
   wire wr_en;
 
-  FIFO_fifo_generator_ramfifo \grf.rf 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo \grf.rf 
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -2037,8 +2027,8 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "10" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_1_3" *) 
-module FIFO_fifo_generator_v13_1_3
+(* C_WR_RESPONSE_LATENCY = "1" *) 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3
    (backup,
     backup_marker,
     clk,
@@ -3024,7 +3014,7 @@ module FIFO_fifo_generator_v13_1_3
        (.G(\<const0> ));
   VCC VCC
        (.P(\<const1> ));
-  FIFO_fifo_generator_v13_1_3_synth inst_fifo_gen
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth inst_fifo_gen
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -3037,8 +3027,7 @@ module FIFO_fifo_generator_v13_1_3
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_1_3_synth" *) 
-module FIFO_fifo_generator_v13_1_3_synth
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth
    (dout,
     empty,
     full,
@@ -3071,7 +3060,7 @@ module FIFO_fifo_generator_v13_1_3_synth
   wire [9:0]wr_data_count;
   wire wr_en;
 
-  FIFO_fifo_generator_top \gconvfifo.rf 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top \gconvfifo.rf 
        (.din(din),
         .dout(dout),
         .empty(empty),
@@ -3084,8 +3073,7 @@ module FIFO_fifo_generator_v13_1_3_synth
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
-module FIFO_memory
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory
    (dout,
     wr_clk,
     rd_clk,
@@ -3112,7 +3100,7 @@ module FIFO_memory
   wire rd_clk;
   wire wr_clk;
 
-  FIFO_blk_mem_gen_v8_3_5 \gbm.gbmg.gbmga.ngecc.bmg 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_blk_mem_gen_v8_3_5 \gbm.gbmg.gbmga.ngecc.bmg 
        (.E(E),
         .Q(Q),
         .WEA(WEA),
@@ -3123,8 +3111,7 @@ module FIFO_memory
         .wr_clk(wr_clk));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
-module FIFO_rd_bin_cntr
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr
    (Q,
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram ,
     E,
@@ -3396,8 +3383,7 @@ module FIFO_rd_bin_cntr
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_dc_as" *) 
-module FIFO_rd_dc_as
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_dc_as
    (rd_data_count,
     WR_PNTR_RD,
     S,
@@ -3533,8 +3519,7 @@ module FIFO_rd_dc_as
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
-module FIFO_rd_logic
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic
    (empty,
     E,
     Q,
@@ -3576,29 +3561,28 @@ module FIFO_rd_logic
   wire [4:0]v1_reg;
   wire [4:0]v1_reg_0;
 
-  FIFO_rd_dc_as \gras.grdc1.rdc 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_dc_as \gras.grdc1.rdc 
        (.S(S),
         .WR_PNTR_RD(WR_PNTR_RD),
         .\gnxpm_cdc.wr_pntr_bin_reg[7] (\gnxpm_cdc.wr_pntr_bin_reg[7] ),
         .\gnxpm_cdc.wr_pntr_bin_reg[9] (\gnxpm_cdc.wr_pntr_bin_reg[9] ),
         .rd_clk(rd_clk),
         .rd_data_count(rd_data_count));
-  FIFO_rd_status_flags_as \gras.rsts 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as \gras.rsts 
        (.E(E),
         .empty(empty),
         .rd_clk(rd_clk),
         .rd_en(rd_en),
         .v1_reg(v1_reg),
         .v1_reg_0(v1_reg_0));
-  FIFO_rd_bin_cntr rpntr
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr rpntr
        (.\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram ),
         .E(E),
         .Q(Q),
         .rd_clk(rd_clk));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_as" *) 
-module FIFO_rd_status_flags_as
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as
    (empty,
     E,
     v1_reg,
@@ -3629,13 +3613,13 @@ module FIFO_rd_status_flags_as
        (.I0(rd_en),
         .I1(ram_empty_fb_i),
         .O(E));
-  FIFO_compare_1 c0
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_compare_1 c0
        (.comp1(comp1),
         .out(ram_empty_fb_i),
         .ram_empty_fb_i_reg(c0_n_0),
         .rd_en(rd_en),
         .v1_reg(v1_reg));
-  FIFO_compare_2 c1
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_compare_2 c1
        (.comp1(comp1),
         .v1_reg_0(v1_reg_0));
   (* DONT_TOUCH *) 
@@ -3662,8 +3646,7 @@ module FIFO_rd_status_flags_as
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "synchronizer_ff" *) 
-module FIFO_synchronizer_ff
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff
    (out,
     in0,
     rd_clk);
@@ -3789,7 +3772,7 @@ module FIFO_synchronizer_ff
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module FIFO_synchronizer_ff_3
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_3
    (out,
     Q,
     wr_clk);
@@ -3915,7 +3898,7 @@ module FIFO_synchronizer_ff_3
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module FIFO_synchronizer_ff_4
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_4
    (\gnxpm_cdc.wr_pntr_bin_reg[9] ,
     D,
     out,
@@ -4146,7 +4129,7 @@ module FIFO_synchronizer_ff_4
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module FIFO_synchronizer_ff_5
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_5
    (\gnxpm_cdc.rd_pntr_bin_reg[9] ,
     D,
     out,
@@ -4376,8 +4359,7 @@ module FIFO_synchronizer_ff_5
         .O(D[8]));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
-module FIFO_wr_bin_cntr
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr
    (S,
     Q,
     \wr_data_count_i_reg[7] ,
@@ -4886,8 +4868,7 @@ module FIFO_wr_bin_cntr
         .O(S[0]));
 endmodule
 
-(* ORIG_REF_NAME = "wr_dc_as" *) 
-module FIFO_wr_dc_as
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_dc_as
    (wr_data_count,
     Q,
     S,
@@ -5032,8 +5013,7 @@ module FIFO_wr_dc_as
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
-module FIFO_wr_logic
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic
    (full,
     WEA,
     Q,
@@ -5069,21 +5049,21 @@ module FIFO_wr_logic
   wire [9:0]wr_data_count;
   wire wr_en;
 
-  FIFO_wr_dc_as \gwas.gwdc0.wdc 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_dc_as \gwas.gwdc0.wdc 
        (.Q(Q[8:0]),
         .S({wpntr_n_0,wpntr_n_1,wpntr_n_2,wpntr_n_3}),
         .\gic0.gc0.count_d2_reg[7] ({wpntr_n_14,wpntr_n_15,wpntr_n_16,wpntr_n_17}),
         .\gic0.gc0.count_d2_reg[9] ({wpntr_n_18,wpntr_n_19}),
         .wr_clk(wr_clk),
         .wr_data_count(wr_data_count));
-  FIFO_wr_status_flags_as \gwas.wsts 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as \gwas.wsts 
        (.E(WEA),
         .full(full),
         .v1_reg(\c1/v1_reg ),
         .v1_reg_0(\c2/v1_reg ),
         .wr_clk(wr_clk),
         .wr_en(wr_en));
-  FIFO_wr_bin_cntr wpntr
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr wpntr
        (.E(WEA),
         .Q(Q),
         .RD_PNTR_WR(RD_PNTR_WR),
@@ -5095,8 +5075,7 @@ module FIFO_wr_logic
         .\wr_data_count_i_reg[9] ({wpntr_n_18,wpntr_n_19}));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_as" *) 
-module FIFO_wr_status_flags_as
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as
    (full,
     E,
     v1_reg,
@@ -5127,13 +5106,13 @@ module FIFO_wr_status_flags_as
        (.I0(wr_en),
         .I1(ram_full_fb_i),
         .O(E));
-  FIFO_compare c1
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_compare c1
        (.comp2(comp2),
         .out(ram_full_fb_i),
         .ram_full_i_reg(c1_n_0),
         .v1_reg(v1_reg),
         .wr_en(wr_en));
-  FIFO_compare_0 c2
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_compare_0 c2
        (.comp2(comp2),
         .v1_reg_0(v1_reg_0));
   (* DONT_TOUCH *) 

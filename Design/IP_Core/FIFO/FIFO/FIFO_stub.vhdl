@@ -1,7 +1,7 @@
 -- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2016.4 (win64) Build 1733598 Wed Dec 14 22:35:39 MST 2016
--- Date        : Mon Nov 20 17:27:09 2017
+-- Date        : Tue Nov 21 03:17:47 2017
 -- Host        : DESKTOP-JC6NIF0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO_stub.vhdl
@@ -21,11 +21,7 @@ entity FIFO is
     rd_en : in STD_LOGIC;
     dout : out STD_LOGIC_VECTOR ( 13 downto 0 );
     full : out STD_LOGIC;
-    almost_full : out STD_LOGIC;
-    wr_ack : out STD_LOGIC;
     empty : out STD_LOGIC;
-    almost_empty : out STD_LOGIC;
-    valid : out STD_LOGIC;
     rd_data_count : out STD_LOGIC_VECTOR ( 9 downto 0 );
     wr_data_count : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
@@ -36,7 +32,7 @@ architecture stub of FIFO is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "wr_clk,rd_clk,din[13:0],wr_en,rd_en,dout[13:0],full,almost_full,wr_ack,empty,almost_empty,valid,rd_data_count[9:0],wr_data_count[9:0]";
+attribute black_box_pad_pin of stub : architecture is "wr_clk,rd_clk,din[13:0],wr_en,rd_en,dout[13:0],full,empty,rd_data_count[9:0],wr_data_count[9:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "fifo_generator_v13_1_3,Vivado 2016.4";
 begin

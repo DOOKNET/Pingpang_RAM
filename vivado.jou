@@ -49,3 +49,89 @@ run 50 us
 run 50 us
 run 50 us
 run 50 us
+update_compile_order -fileset sim_1
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+source tb_fifo.tcl
+run 50 us
+run 50 us
+run 50 us
+run 50 us
+run 50 us
+relaunch_sim
+run 50 us
+run 50 us
+run 50 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+close_sim
+launch_simulation
+source tb_fifo.tcl
+run 100 us
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source tb_fifo.tcl
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+run 100 us
+close_sim
+launch_simulation
+source tb_fifo.tcl
+run 100 us
+restart
+add_wave {{/tb_fifo/FIFO_inst0/wr_clk}} {{/tb_fifo/FIFO_inst0/rd_clk}} {{/tb_fifo/FIFO_inst0/din}} {{/tb_fifo/FIFO_inst0/wr_en}} {{/tb_fifo/FIFO_inst0/rd_en}} {{/tb_fifo/FIFO_inst0/dout}} {{/tb_fifo/FIFO_inst0/full}} {{/tb_fifo/FIFO_inst0/almost_full}} {{/tb_fifo/FIFO_inst0/wr_ack}} {{/tb_fifo/FIFO_inst0/empty}} {{/tb_fifo/FIFO_inst0/almost_empty}} {{/tb_fifo/FIFO_inst0/valid}} {{/tb_fifo/FIFO_inst0/rd_data_count}} {{/tb_fifo/FIFO_inst0/wr_data_count}} 
+run 100 us
+run 100 us
+run 100 us
+close_sim
+set_property -dict [list CONFIG.Almost_Full_Flag {false} CONFIG.Almost_Empty_Flag {false} CONFIG.Valid_Flag {false} CONFIG.Write_Acknowledge_Flag {false}] [get_ips FIFO]
+generate_target all [get_files  e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci]
+catch { config_ip_cache -export [get_ips -all FIFO] }
+export_ip_user_files -of_objects [get_files e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci] -no_script -sync -force -quiet
+reset_run FIFO_synth_1
+launch_runs -jobs 4 FIFO_synth_1
+export_simulation -of_objects [get_files e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci] -directory E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files/sim_scripts -ip_user_files_dir E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files -ipstatic_source_dir E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/modelsim} {questa=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/questa} {riviera=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/riviera} {activehdl=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+add_files -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/Code/FIFO_Control.v
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_fifo.tcl
+run 100 us
+run 100 us
+add_wave {{/tb_fifo/FIFO_Control_inst0/clk}} {{/tb_fifo/FIFO_Control_inst0/wr_clk}} {{/tb_fifo/FIFO_Control_inst0/rd_clk}} {{/tb_fifo/FIFO_Control_inst0/we_valid}} {{/tb_fifo/FIFO_Control_inst0/data_in}} {{/tb_fifo/FIFO_Control_inst0/wea_en}} {{/tb_fifo/FIFO_Control_inst0/web_en}} {{/tb_fifo/FIFO_Control_inst0/rda_en}} {{/tb_fifo/FIFO_Control_inst0/rdb_en}} {{/tb_fifo/FIFO_Control_inst0/din_a}} {{/tb_fifo/FIFO_Control_inst0/din_b}} {{/tb_fifo/FIFO_Control_inst0/fulla}} {{/tb_fifo/FIFO_Control_inst0/fullb}} {{/tb_fifo/FIFO_Control_inst0/emptya}} {{/tb_fifo/FIFO_Control_inst0/emptyb}} {{/tb_fifo/FIFO_Control_inst0/rda_data_count}} {{/tb_fifo/FIFO_Control_inst0/rdb_data_count}} {{/tb_fifo/FIFO_Control_inst0/wea_data_count}} {{/tb_fifo/FIFO_Control_inst0/web_data_count}} {{/tb_fifo/FIFO_Control_inst0/douta}} {{/tb_fifo/FIFO_Control_inst0/doutb}} {{/tb_fifo/FIFO_Control_inst0/fulla_pose_r0}} {{/tb_fifo/FIFO_Control_inst0/fulla_pose_r1}} {{/tb_fifo/FIFO_Control_inst0/fulla_pose}} {{/tb_fifo/FIFO_Control_inst0/emptya_pose_r0}} {{/tb_fifo/FIFO_Control_inst0/emptya_pose_r1}} {{/tb_fifo/FIFO_Control_inst0/emptya_pose}} {{/tb_fifo/FIFO_Control_inst0/fullb_pose_r0}} {{/tb_fifo/FIFO_Control_inst0/fullb_pose_r1}} {{/tb_fifo/FIFO_Control_inst0/fullb_pose}} {{/tb_fifo/FIFO_Control_inst0/emptyb_pose_r0}} {{/tb_fifo/FIFO_Control_inst0/emptyb_pose_r1}} {{/tb_fifo/FIFO_Control_inst0/emptyb_pose}} {{/tb_fifo/FIFO_Control_inst0/current_state}} {{/tb_fifo/FIFO_Control_inst0/next_state}} {{/tb_fifo/FIFO_Control_inst0/web_rda}} {{/tb_fifo/FIFO_Control_inst0/rda}} {{/tb_fifo/FIFO_Control_inst0/wea_rdb}} {{/tb_fifo/FIFO_Control_inst0/rdb}} 
+restart
+run 100 us
+run 100 us
+run 100 us
+close_sim

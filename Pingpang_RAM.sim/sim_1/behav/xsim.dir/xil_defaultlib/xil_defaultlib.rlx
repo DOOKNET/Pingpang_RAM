@@ -2,6 +2,7 @@
 2016.4
 Dec 14 2016
 22:58:16
-E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/sim/FIFO.v,1511169888,verilog,,,,FIFO,,,,,,,,
+E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/Code/FIFO_Control.v,1511207303,verilog,,,,FIFO_Control,,,,,,,,
+E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/sim/FIFO.v,1511205340,verilog,,,,FIFO,,,,,,,,
 E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v,1481753704,verilog,,,,glbl,,,,,,,,
-E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v,1511182000,verilog,,,,tb_fifo,,,,,,,,
+E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v,1511206850,verilog,,,,tb_fifo,,,,,,,,

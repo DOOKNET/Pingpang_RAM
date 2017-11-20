@@ -61,11 +61,7 @@ COMPONENT FIFO
     rd_en : IN STD_LOGIC;
     dout : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
     full : OUT STD_LOGIC;
-    almost_full : OUT STD_LOGIC;
-    wr_ack : OUT STD_LOGIC;
     empty : OUT STD_LOGIC;
-    almost_empty : OUT STD_LOGIC;
-    valid : OUT STD_LOGIC;
     rd_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
     wr_data_count : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
   );
@@ -85,11 +81,7 @@ your_instance_name : FIFO
     rd_en => rd_en,
     dout => dout,
     full => full,
-    almost_full => almost_full,
-    wr_ack => wr_ack,
     empty => empty,
-    almost_empty => almost_empty,
-    valid => valid,
     rd_data_count => rd_data_count,
     wr_data_count => wr_data_count
   );
