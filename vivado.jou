@@ -2,45 +2,50 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Fri Nov 17 22:23:39 2017
-# Process ID: 19656
+# Start of session at: Mon Nov 20 12:50:53 2017
+# Process ID: 3996
 # Current directory: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12828 E:\Workspace\Vivado_16.4\2017_11_17_Pingpang_RAM\Pingpang_RAM.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13136 E:\Workspace\Vivado_16.4\2017_11_17_Pingpang_RAM\Pingpang_RAM.xpr
 # Log file: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/vivado.log
 # Journal file: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.xpr
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v
-update_compile_order -fileset sim_1
-add_files -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/Code/RAM_Control_0.v
+create_ip -name fifo_generator -vendor xilinx.com -library ip -version 13.1 -module_name FIFO -dir E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.synchronization_stages {2} CONFIG.Input_Data_Width {14} CONFIG.Use_Embedded_Registers {false} CONFIG.Reset_Pin {false} CONFIG.Almost_Full_Flag {true} CONFIG.Almost_Empty_Flag {true} CONFIG.Valid_Flag {true} CONFIG.Write_Acknowledge_Flag {true} CONFIG.Overflow_Flag {false} CONFIG.Write_Data_Count {true} CONFIG.Read_Data_Count {true} CONFIG.Output_Data_Width {14} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {0} CONFIG.Use_Dout_Reset {false} CONFIG.Full_Threshold_Assert_Value {1021} CONFIG.Full_Threshold_Negate_Value {1020}] [get_ips FIFO]
+generate_target {instantiation_template} [get_files e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci]
+generate_target all [get_files  e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci]
+catch { config_ip_cache -export [get_ips -all FIFO] }
+export_ip_user_files -of_objects [get_files e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci]
+launch_runs -jobs 4 FIFO_synth_1
+export_simulation -of_objects [get_files e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci] -directory E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files/sim_scripts -ip_user_files_dir E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files -ipstatic_source_dir E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/modelsim} {questa=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/questa} {riviera=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/riviera} {activehdl=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+remove_files  E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/Code/RAM_Control_0.v
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top tb_RAM_0 [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/sim/FIFO.v}
 launch_simulation
-source tb_RAM_0.tcl
-run 10 us
-run 50 us
-run 50 us
-relaunch_sim
-run 50 us
-run 50 us
-run 50 us
-relaunch_sim
-run 100 us
-relaunch_sim
-run 100 us
-run 100 us
-restart
-add_wave {{/tb_RAM_0/sclk}} {{/tb_RAM_0/data}} {{/tb_RAM_0/cnt}} {{/tb_RAM_0/addr_we}} {{/tb_RAM_0/addr_rd}} {{/tb_RAM_0/data_tvalid}} 
-run 100 us
-run 100 us
-relaunch_sim
-run 100 us
+source fifo_generator_vlog_beh.tcl
 close_sim
+remove_files  -fileset sim_1 E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v
+remove_files  -fileset sim_1 E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v
+launch_simulation
+source tb_fifo.tcl
+run 50 us
+run 50 us
+add_wave {{/tb_fifo/FIFO_inst0/wr_clk}} {{/tb_fifo/FIFO_inst0/rd_clk}} {{/tb_fifo/FIFO_inst0/din}} {{/tb_fifo/FIFO_inst0/wr_en}} {{/tb_fifo/FIFO_inst0/rd_en}} {{/tb_fifo/FIFO_inst0/dout}} {{/tb_fifo/FIFO_inst0/full}} {{/tb_fifo/FIFO_inst0/almost_full}} {{/tb_fifo/FIFO_inst0/wr_ack}} {{/tb_fifo/FIFO_inst0/empty}} {{/tb_fifo/FIFO_inst0/almost_empty}} {{/tb_fifo/FIFO_inst0/valid}} {{/tb_fifo/FIFO_inst0/rd_data_count}} {{/tb_fifo/FIFO_inst0/wr_data_count}} 
+restart
+run 50 us
+run 50 us
+run 50 us
+relaunch_sim
+run 50 us
+relaunch_sim
+run 50 us
+run 50 us
+run 50 us
+run 50 us

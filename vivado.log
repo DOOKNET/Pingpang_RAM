@@ -2,10 +2,10 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Fri Nov 17 22:23:39 2017
-# Process ID: 19656
+# Start of session at: Mon Nov 20 12:50:53 2017
+# Process ID: 3996
 # Current directory: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12828 E:\Workspace\Vivado_16.4\2017_11_17_Pingpang_RAM\Pingpang_RAM.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13136 E:\Workspace\Vivado_16.4\2017_11_17_Pingpang_RAM\Pingpang_RAM.xpr
 # Log file: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/vivado.log
 # Journal file: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM\vivado.jou
 #-----------------------------------------------------------
@@ -16,54 +16,87 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Softwares/Vivado/Vivado/2016.4/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 798.586 ; gain = 134.977
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v
-update_compile_order -fileset sim_1
-add_files -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/Code/RAM_Control_0.v
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 753.789 ; gain = 94.223
+create_ip -name fifo_generator -vendor xilinx.com -library ip -version 13.1 -module_name FIFO -dir E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.synchronization_stages {2} CONFIG.Input_Data_Width {14} CONFIG.Use_Embedded_Registers {false} CONFIG.Reset_Pin {false} CONFIG.Almost_Full_Flag {true} CONFIG.Almost_Empty_Flag {true} CONFIG.Valid_Flag {true} CONFIG.Write_Acknowledge_Flag {true} CONFIG.Overflow_Flag {false} CONFIG.Write_Data_Count {true} CONFIG.Read_Data_Count {true} CONFIG.Output_Data_Width {14} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {0} CONFIG.Use_Dout_Reset {false} CONFIG.Full_Threshold_Assert_Value {1021} CONFIG.Full_Threshold_Negate_Value {1020}] [get_ips FIFO]
+generate_target {instantiation_template} [get_files e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO'...
+generate_target all [get_files  e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO'...
+catch { config_ip_cache -export [get_ips -all FIFO] }
+export_ip_user_files -of_objects [get_files e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci]
+launch_runs -jobs 4 FIFO_synth_1
+[Mon Nov 20 17:24:50 2017] Launched FIFO_synth_1...
+Run output will be captured here: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.runs/FIFO_synth_1/runme.log
+export_simulation -of_objects [get_files e:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/FIFO.xci] -directory E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files/sim_scripts -ip_user_files_dir E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files -ipstatic_source_dir E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/modelsim} {questa=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/questa} {riviera=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/riviera} {activehdl=E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+remove_files  E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/Code/RAM_Control_0.v
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
-set_property top tb_RAM_0 [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/sim/FIFO.v}
 launch_simulation
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [USF-XSim-7] Finding pre-compiled libraries...
 INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_RAM_0' in fileset 'sim_1'...
+INFO: [USF-XSim-37] Inspecting design source files for 'fifo_generator_vlog_beh' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_RAM_0_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_RAM_0
+"xvlog -m64 --relax -prj fifo_generator_vlog_beh_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_generator_vlog_beh
+INFO: [VRFC 10-2458] undeclared symbol wr_rst_busy_i, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:1249]
+INFO: [VRFC 10-2458] undeclared symbol wr_eop_ad, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:1331]
+INFO: [VRFC 10-2458] undeclared symbol rd_eop_ad, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:1332]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_axis, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:1574]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wach, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:2099]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wdch, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:2319]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wrch, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:2486]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_rach, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:2866]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_rdch, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:3099]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_3_CONV_VER
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_3_sync_stage
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_3_bhv_ver_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_3_beh_ver_ll_afifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_3_bhv_ver_ss
+INFO: [VRFC 10-2458] undeclared symbol srst_wrst_busy, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:7858]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_3_bhv_ver_preload0
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_1_3_axic_reg_slice
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RAM_0_behav xil_defaultlib.tb_RAM_0 xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_generator_vlog_beh_behav xil_defaultlib.fifo_generator_vlog_beh xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-1783] select index 2 into rrst_reg is out of bounds [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:4885]
+WARNING: [VRFC 10-1783] select index 2 into rrst_q is out of bounds [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v:4895]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.tb_RAM_0
+Compiling module xil_defaultlib.fifo_generator_v13_1_3_bhv_ver_s...
+Compiling module xil_defaultlib.fifo_generator_v13_1_3_CONV_VER(...
+Compiling module xil_defaultlib.fifo_generator_vlog_beh
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_RAM_0_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Built simulation snapshot fifo_generator_vlog_beh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_RAM_0_behav -key {Behavioral:sim_1:Functional:tb_RAM_0} -tclbatch {tb_RAM_0.tcl} -log {simulate.log}"
+   with args "fifo_generator_vlog_beh_behav -key {Behavioral:sim_1:Functional:fifo_generator_vlog_beh} -tclbatch {fifo_generator_vlog_beh.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2016.4
 Time resolution is 1 ps
-source tb_RAM_0.tcl
+source fifo_generator_vlog_beh.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -74,159 +107,185 @@ source tb_RAM_0.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_RAM_0_behav' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'fifo_generator_vlog_beh_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 840.379 ; gain = 0.000
-run 10 us
-run 50 us
-run 50 us
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_RAM_0' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_RAM_0_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_RAM_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RAM_0_behav xil_defaultlib.tb_RAM_0 xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.tb_RAM_0
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_RAM_0_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-run 50 us
-run 50 us
-run 50 us
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_RAM_0' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_RAM_0_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_RAM_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RAM_0_behav xil_defaultlib.tb_RAM_0 xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.tb_RAM_0
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_RAM_0_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-run 100 us
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_RAM_0' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_RAM_0_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_RAM_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RAM_0_behav xil_defaultlib.tb_RAM_0 xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.tb_RAM_0
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_RAM_0_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-run 100 us
-run 100 us
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-add_wave {{/tb_RAM_0/sclk}} {{/tb_RAM_0/data}} {{/tb_RAM_0/cnt}} {{/tb_RAM_0/addr_we}} {{/tb_RAM_0/addr_rd}} {{/tb_RAM_0/data_tvalid}} 
-run 100 us
-run 100 us
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_RAM_0' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_RAM_0_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_RAM_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_RAM_0_behav xil_defaultlib.tb_RAM_0 xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.tb_RAM_0
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_RAM_0_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-run 100 us
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 888.711 ; gain = 6.801
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
+remove_files  -fileset sim_1 E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/simulation/fifo_generator_vlog_beh.v
+remove_files  -fileset sim_1 E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_fifo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+"xvlog -m64 --relax -prj tb_fifo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/sim/FIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo
+INFO: [VRFC 10-2458] undeclared symbol dout, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v:70]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj tb_fifo_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L fifo_generator_v13_1_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fifo_behav xil_defaultlib.tb_fifo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port dout [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_sync_stag...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_bhv_ver_a...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_CONV_VER(...
+Compiling module fifo_generator_v13_1_3.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3(C_DATA_CO...
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.tb_fifo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fifo_behav -key {Behavioral:sim_1:Functional:tb_fifo} -tclbatch {tb_fifo.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source tb_fifo.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fifo_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 946.156 ; gain = 0.000
+run 50 us
+run 50 us
+add_wave {{/tb_fifo/FIFO_inst0/wr_clk}} {{/tb_fifo/FIFO_inst0/rd_clk}} {{/tb_fifo/FIFO_inst0/din}} {{/tb_fifo/FIFO_inst0/wr_en}} {{/tb_fifo/FIFO_inst0/rd_en}} {{/tb_fifo/FIFO_inst0/dout}} {{/tb_fifo/FIFO_inst0/full}} {{/tb_fifo/FIFO_inst0/almost_full}} {{/tb_fifo/FIFO_inst0/wr_ack}} {{/tb_fifo/FIFO_inst0/empty}} {{/tb_fifo/FIFO_inst0/almost_empty}} {{/tb_fifo/FIFO_inst0/valid}} {{/tb_fifo/FIFO_inst0/rd_data_count}} {{/tb_fifo/FIFO_inst0/wr_data_count}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 50 us
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+run 50 us
+run 50 us
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_fifo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+"xvlog -m64 --relax -prj tb_fifo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/sim/FIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo
+INFO: [VRFC 10-2458] undeclared symbol dout, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v:70]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj tb_fifo_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L fifo_generator_v13_1_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fifo_behav xil_defaultlib.tb_fifo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port dout [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_sync_stag...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_bhv_ver_a...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_CONV_VER(...
+Compiling module fifo_generator_v13_1_3.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3(C_DATA_CO...
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.tb_fifo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 946.684 ; gain = 0.000
+run 50 us
+relaunch_sim
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'tb_fifo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+"xvlog -m64 --relax -prj tb_fifo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/IP_Core/FIFO/FIFO/sim/FIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo
+INFO: [VRFC 10-2458] undeclared symbol dout, assumed default net type wire [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v:70]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj tb_fifo_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.sim/sim_1/behav'
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto c98894352ac846049d2f12eee6b84097 --debug typical --relax --mt 2 -L fifo_generator_v13_1_3 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fifo_behav xil_defaultlib.tb_fifo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 14 for port dout [E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_fifo.v:70]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_sync_stag...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_bhv_ver_a...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3_CONV_VER(...
+Compiling module fifo_generator_v13_1_3.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_1_3.fifo_generator_v13_1_3(C_DATA_CO...
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.tb_fifo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 946.684 ; gain = 0.000
+run 50 us
+run 50 us
+run 50 us
+run 50 us

@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Fri Nov 17 22:23:39 2017
+# Process ID: 19656
+# Current directory: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12828 E:\Workspace\Vivado_16.4\2017_11_17_Pingpang_RAM\Pingpang_RAM.xpr
+# Log file: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/vivado.log
+# Journal file: E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Pingpang_RAM.xpr
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Testbeach/tb_RAM_0.v
+update_compile_order -fileset sim_1
+add_files -norecurse E:/Workspace/Vivado_16.4/2017_11_17_Pingpang_RAM/Design/Code/RAM_Control_0.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_RAM_0 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source tb_RAM_0.tcl
+run 10 us
+run 50 us
+run 50 us
+relaunch_sim
+run 50 us
+run 50 us
+run 50 us
+relaunch_sim
+run 100 us
+relaunch_sim
+run 100 us
+run 100 us
+restart
+add_wave {{/tb_RAM_0/sclk}} {{/tb_RAM_0/data}} {{/tb_RAM_0/cnt}} {{/tb_RAM_0/addr_we}} {{/tb_RAM_0/addr_rd}} {{/tb_RAM_0/data_tvalid}} 
+run 100 us
+run 100 us
+relaunch_sim
+run 100 us
+close_sim
