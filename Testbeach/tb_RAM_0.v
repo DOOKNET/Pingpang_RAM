@@ -49,10 +49,5 @@ always @(posedge sclk) begin
 	end
 end
 //-------------------------------//
-
-
-
-
-
+	
 endmodule 
-
